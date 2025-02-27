@@ -5542,6 +5542,7 @@ dependencies = [
  "either",
  "eyre",
  "op-alloy-network",
+ "reqwest",
  "reth-chainspec",
  "reth-errors",
  "reth-ethereum-consensus",
