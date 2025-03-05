@@ -26,6 +26,7 @@ async fn test_in_zkvm() {
     let config = Config {
         chain: Chain::mainnet(),
         genesis: Genesis::Mainnet,
+        rpc_url: None,
         cache_dir: None,
         custom_beneficiary: None,
         prove: false,
