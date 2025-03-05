@@ -5400,6 +5400,7 @@ dependencies = [
  "rsp-host-executor",
  "rsp-primitives",
  "serde",
+ "serde_json",
  "sp1-core-executor",
  "sp1-helper",
  "sp1-sdk",
