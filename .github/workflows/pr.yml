@@ -177,7 +177,7 @@ jobs:
 
       - name: "Checkout base branch"
         run: |
-          git checkout origin/${{ github.event.pull_request.base.ref }} -- . ':(exclude)cycle_stats.json'
+          git checkout ${{ github.event.pull_request.base.ref }} -- . ':(exclude)cycle_stats.json'
 
       - name: "Run tests on base branch"
         id: tests-report
