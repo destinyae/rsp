@@ -105,11 +105,11 @@ jobs:
     name: "Run tests"
     runs-on:
       ["runs-on", "runner=64cpu-linux-x64", "run-id=${{ github.run_id }}"]
-    env:
-      CARGO_NET_GIT_FETCH_WITH_CLI: "true"
     steps:
       - name: "Checkout sources"
         uses: "actions/checkout@v4"
+        with:
+          fetch-depth: 0  
 
       - name: "Install sp1up"
         run: |
@@ -177,7 +177,7 @@ jobs:
 
       - name: "Checkout base branch"
         run: |
-          git checkout ${{ github.event.pull_request.base.ref }} -- . ':(exclude)cycle_stats.json'
+          git checkout origin/${{ github.event.pull_request.base.ref }} -- . ':(exclude)cycle_stats.json'
 
       - name: "Run tests on base branch"
         id: tests-report
